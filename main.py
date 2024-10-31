@@ -3,7 +3,8 @@
 # throughout this file
 import pygame
 from constants import *
-
+clock = pygame.time.Clock
+dt = 0
 
 
 def main():
@@ -17,6 +18,10 @@ def main():
         pygame.display.flip()
 
 
+
+    
+    clock_time = clock.tick(60)
+    dt = clock_time / 1000
 
 
 
