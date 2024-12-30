@@ -2,9 +2,13 @@
 # the open-source pygame library
 # throughout this file
 import pygame
-from constants import *
+from constants import PLAYER_RADIUS, SCREEN_WIDTH, SCREEN_HEIGHT
+from player import Player
+from circleshape import CircleShape
 clock = pygame.time.Clock
 dt = 0
+# Create player in the middle of the screen
+player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
 
 def main():
@@ -15,6 +19,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill(0000)
+        player.draw(screen)
         pygame.display.flip()
 
 
